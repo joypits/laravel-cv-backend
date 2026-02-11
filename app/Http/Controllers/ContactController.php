@@ -27,7 +27,7 @@ class ContactController extends Controller
 
     return response()->json([
         'message' => 'Your message has been sent successfully!',
-        'submitted_by' => $user->email,
+        'submitted_by' => $request->email,
     ], 200);
     
     // You can save the contact message to DB, send email, etc.
