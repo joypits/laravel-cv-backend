@@ -16,7 +16,7 @@ class ContactController extends Controller
     ]);
 
     // Authenticated user is automatically the default API user
-    $user = $request->user();
+    //$user = $request->user();
 
      Mail::to(env('CONTACT_RECEIVER_EMAIL', 'joypitprieto@gmail.com'))
         ->send(new ContactMessageMail(
