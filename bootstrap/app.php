@@ -5,6 +5,7 @@ use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
 use App\Http\Middleware\DefaultApiUser;
+use Fruitcake\Cors\HandleCors;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -15,6 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->group('api', [
+            HandleCors::class, // <- add this line to enable CORS handling for API routes
             EnsureFrontendRequestsAreStateful::class,
             DefaultApiUser::class, // <- add your middleware here
             'throttle:api',
