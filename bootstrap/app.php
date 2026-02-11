@@ -16,9 +16,8 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->group('api', [
-            HandleCors::class, // <- add this line to enable CORS handling for API routes
             EnsureFrontendRequestsAreStateful::class,
-            DefaultApiUser::class, // <- add your middleware here
+            DefaultApiUser::class,
             'throttle:api',
         ]);
     })

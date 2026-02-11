@@ -14,21 +14,12 @@ return [
     | To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
     |
     */
-
-    'paths' => ['api/*'],
-
-    'allowed_methods' => ['*'],
-
-    'allowed_origins' => ['https://joypits.github.io'],//['http://localhost:5173'],
-
+    'paths' => ['api/*'],                  // all API routes
+    'allowed_methods' => ['*'],            // allow GET, POST, PUT, etc.
+    'allowed_origins' => ['https://joypits.github.io'], // your frontend
     'allowed_origins_patterns' => [],
-
     'allowed_headers' => ['*'],
-
     'exposed_headers' => [],
-
     'max_age' => 0,
-
     'supports_credentials' => false,
-
 ];
