@@ -16,7 +16,7 @@ return [
     */
     'paths' => ['api/*'],                  // all API routes
     'allowed_methods' => ['*'],            // allow GET, POST, PUT, etc.
-    'allowed_origins' => ['https://joypits.github.io/vue-cv'], // your frontend
+    'allowed_origins' => ['https://joypits.github.io', 'http://localhost:5173'],
     'allowed_origins_patterns' => [],
     'allowed_headers' => ['*'],
     'exposed_headers' => [],
