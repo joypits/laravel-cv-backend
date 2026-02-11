@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://joypits.github.io/vue-cv/#/'],//['http://localhost:5173'],
+    'allowed_origins' => ['https://joypits.github.io'],//['http://localhost:5173'],
 
     'allowed_origins_patterns' => [],
 
